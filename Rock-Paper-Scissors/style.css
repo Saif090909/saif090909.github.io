@@ -1,0 +1,74 @@
+body{
+    background-color: #9197AE;
+}
+
+h1{
+    display: inline-block;
+    position: center;
+    font-size: 50px;
+    font-family: "DotGothic16", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    height: fit-content;
+}
+
+.header-container{
+    height: fit-content;
+    position: relative;
+    padding: 0;
+    margin-left: 10px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+
+.buttons-container{
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* border: solid red; */
+
+
+}
+
+
+.container2 {
+    /* border: solid rgb(69, 1, 1); */ 
+    width: auto; /* Automatically adapt width based on children */
+    height: auto; /* Automatically adapt height based on children */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* wooooo Center child elements horizontally */
+    flex-wrap: wrap; /* Allow wrapping if there are multiple buttons */
+    padding: 10px; /* Optional padding inside the container */
+    box-sizing: border-box; /* Ensure padding doesn’t cause overflow */
+
+}
+
+
+
+.btn{
+    height: 250px;
+    width: 300px;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #030a4a;
+    margin: 20px;
+}
+
+.btn-image{
+    height: 100%;
+    width: 100%;
+    border-radius: 10%;
+    object-fit: fill;
+    padding: 25px;
+    margin: 0%;
+}
+

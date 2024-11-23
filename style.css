@@ -1,0 +1,311 @@
+/* ################################ */
+/*         Global Settings          */
+/* ################################ */
+
+body {
+    background-color: aliceblue;
+}
+
+h1, h2, h3, .header3 {
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.header2 {
+    color: #3FA2F6;
+}
+
+
+
+.skills {
+    text-align: center;
+    margin-top: 100px;
+    color: #0F67B1;
+    font-size: 3rem;
+}
+
+
+
+
+.p1 {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #0F67B1;
+    margin-bottom: 20px;
+}
+
+.p2 {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.links {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.ProjectCards {
+    background-color: #ffffff;
+    border-radius: 15px; /* Rounded edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 20px;
+    max-width: 300px; /* Limit card width */
+    margin: 0 auto; /* Center the card horizontally */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+
+}
+
+.ProjectCards:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1rem;
+    color: #007BFF; /* Nice blue link */
+    border: 1px solid #007BFF; /* Border matches link color */
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effects */
+}
+
+a:hover {
+    background-color: #007BFF; /* Blue background on hover */
+    color: #ffffff; /* White text on hover */
+}
+
+
+
+
+/* ################################ */
+/* Small screens */
+/* ################################ */
+
+@media (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
+/* ################################ */
+/* ####    Medium screens ######### */
+/* ################################ */
+@media (min-width: 601px) and (max-width: 1024px) {
+    
+    
+    h1, h2, h3, .header3 {
+        font-family: "Merriweather", serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+    
+    .container1 {
+        position: relative; /* Establishes a positioning context */
+        background-color: #E4F9F5;
+        display: flex;
+        flex-direction: column; /* Ensures stacking of elements */
+        align-items: center;
+        padding: 20px;
+    }
+    
+    .photo2 {
+        display: inline-block;
+        position: relative;
+        border: solid red;
+        justify-self: end;
+        grid-row: 2;
+    }
+    
+    .cloud {
+        position: absolute; /* Allows it to be layered over #header */
+    top: 0; /* Position it at the top of the container */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust centering */
+    z-index: 10; /* Ensure it is on top */
+    opacity: 0.7; /* Adjust transparency (0 = fully transparent, 1 = fully opaque) */
+    }
+    
+    #header {
+        position: relative; /* Ensure proper stacking within the container */
+    z-index: 5; /* Lower than .cloud */
+    padding: 50px;
+    background-color: #FAFFAF;
+    color: #0F67B1;
+    border-radius: 50px;
+    margin-top: 100px; /* Push header down for visibility */
+    }
+    
+    .header2 {
+        color: #3FA2F6;
+    }
+    
+    
+    
+    .skills {
+        text-align: center;
+        margin-top: 100px;
+        color: #0F67B1;
+        font-size: 3rem;
+    }
+    
+    .parent {
+   
+        background-color: #E4F9F5;
+        width: 80%;
+        margin-left: 50px;
+        border-radius: 30px;
+        padding-bottom: 100px;
+        border: dashed red;
+    }
+
+    #coding {
+        border: dashed purple;
+        height: fit-content;
+        width: fit-content;
+        position: relative;
+        left: -20px;
+    }
+
+    #airplane {
+        border: dashed green;
+        margin-left: 30%;
+        height: fit-content;
+        width: fit-content;
+
+    }
+    
+    .grid1 {
+        border: dashed blue;
+        margin-bottom: 30px;
+
+    }
+    
+    
+    }
+    
+    p {
+        line-height: 24px;
+        color: #3FA2F6;
+    }
+
+    footer {
+        background-color: #FAFFAF;
+        padding: 50px;
+        margin-top: 20px;
+    }
+    
+    .footer {
+        display: flex;
+        justify-content: space-around;
+        font-size: x-large;
+    }
+
+
+/* ################################ */
+/* ################################ */
+/* Large screens */
+/* ################################ */
+/* ################################ */
+
+@media (min-width: 1025px) {
+    
+
+    .container1 {
+        background-color: #E4F9F5;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto; /* Two rows for cloud and header */
+        position: relative;
+    }
+
+    
+
+   
+    .photo2 {
+        display: inline-block;
+        position: relative;
+        justify-self: end;
+        grid-row: 2;
+        top: 0;
+    }
+    
+ 
+    .cloud {
+        grid-row: 1; /* Cloud stays on top */
+        justify-self: center;
+        margin: 20px 0; /* Add spacing */
+    }
+    
+    #header {
+        grid-row: 2; /* Header stays below the cloud */
+        justify-self: start; /* Align header to the left */
+        padding: 50px;
+        background-color: #FAFFAF;
+        color: #0F67B1;
+        border-radius: 50px;
+        margin-left: 50px; /* Ensure it's under the cloud */
+        height: fit-content;
+        position: relative;
+        top: 100px;
+    }
+    
+ 
+    .parent {
+        display: grid;
+        grid-template-columns: 0.25fr 0.5fr;
+        grid-template-rows: 0.25fr 0.25fr;
+        background-color: #E4F9F5;
+        width: 80%;
+        margin-left: 50px;
+        border-radius: 30px;
+        padding-bottom: 100px;
+    }
+
+    .photo3 {
+        position: relative;
+        top: 50;
+        margin-top: 50px;
+    }
+
+    .grid1 {
+        position: relative;
+        top: 0;
+        margin-bottom: 0;
+        height: fit-content;
+        margin-top: 50px;
+    }
+   
+    .paragraphs {
+        width: 200%; /* Limit maximum width of paragraphs */
+        margin-top: 50px;
+        margin-left: 20px;
+    }
+    
+    footer {
+        background-color: #FAFFAF;
+        padding: 50px;
+      
+    }
+    
+    .footer {
+        display: flex;
+        justify-content: space-around;
+        font-size: x-large;
+    }
+
+
+}
