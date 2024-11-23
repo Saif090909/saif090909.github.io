@@ -7,6 +7,7 @@ footerDiv.className = 'footer';
 footerDiv.style.backgroundColor = "#FFEB3B"; // Yellow background
 footerDiv.style.padding = "20px";
 footerDiv.style.borderRadius = "10px";
+footerDiv.style.textAlign = "center";
 
 // Create the h2 element
 const h2 = document.createElement('h2');
@@ -25,7 +26,6 @@ const copyright = document.createElement('p');
 copyright.textContent = "@2024 - Saif Ismael Alkhezani";
 copyright.style.color = "black";
 copyright.style.fontSize = "small";
-copyright.style.textAlign = "center";
 copyright.style.marginTop = "10px";
 
 // Social media links with Bootstrap icons
@@ -47,6 +47,7 @@ socialMediaLinks.forEach(link => {
     anchor.style.transition = "color 0.3s ease, filter 0.3s ease"; // Smooth hover effects
     anchor.setAttribute('aria-label', link.altText); // Accessibility label
     anchor.style.marginTop = '10px';
+
     // Create the icon
     const icon = document.createElement('i');
     icon.className = link.iconClass;
@@ -54,6 +55,7 @@ socialMediaLinks.forEach(link => {
     icon.style.color = "#000"; // Icon color (black by default)
     icon.style.transition = "filter 0.3s ease"; // Smooth hover effect
 
+    
     // Add hover effect dynamically
     anchor.addEventListener("mouseover", () => {
         icon.style.filter = "invert(1)"; // Invert icon colors
