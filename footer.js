@@ -46,7 +46,7 @@ socialMediaLinks.forEach(link => {
     anchor.style.margin = "0 10px"; // Add spacing between icons
     anchor.style.transition = "color 0.3s ease, filter 0.3s ease"; // Smooth hover effects
     anchor.setAttribute('aria-label', link.altText); // Accessibility label
-
+    anchor.style.marginTop = '10px';
     // Create the icon
     const icon = document.createElement('i');
     icon.className = link.iconClass;
