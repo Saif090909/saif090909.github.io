@@ -1,25 +1,24 @@
-// footer.js
-
 // Get the footer container element where the content will be inserted
 const footerContainer = document.getElementById('footer-container');
 
 // Create the elements for the footer content
-const h2 = document.createElement('h2');
-h2.textContent = "Get in touch with my cubing academy!";
-h2.style.color = "#0F67B1";
-h2.style.marginLeft = "10px"; // Add 10px left margin
-
-const p = document.createElement('p');
-p.textContent = "If you are interested in how to solve a Rubik's cube.";
-p.className = 'foot';
-p.style.fontSize = "large";
-p.style.marginLeft = "10px"; // Add 10px left margin
-
 const footerDiv = document.createElement('div');
 footerDiv.className = 'footer';
 footerDiv.style.backgroundColor = "#FFEB3B"; // Yellow background
 footerDiv.style.padding = "20px";
 footerDiv.style.borderRadius = "10px";
+
+// Create the h2 element
+const h2 = document.createElement('h2');
+h2.textContent = "Get in touch with my cubing academy!";
+h2.style.color = "#0F67B1";
+h2.style.marginLeft = "10px"; // Add 10px left margin
+
+// Create the p element
+const p = document.createElement('p');
+p.textContent = "If you are interested in how to solve a Rubik's cube.";
+p.style.fontSize = "large";
+p.style.marginLeft = "10px"; // Add 10px left margin
 
 // Add the copyright text
 const copyright = document.createElement('p');
@@ -70,8 +69,10 @@ socialMediaLinks.forEach(link => {
     footerDiv.appendChild(anchor);
 });
 
-// Append all elements to the footer container
-footerContainer.appendChild(h2);
-footerContainer.appendChild(p);
+// Append the h2, p, and copyright to the footerDiv
+footerDiv.appendChild(h2);
+footerDiv.appendChild(p);
+footerDiv.appendChild(copyright);
+
+// Append the footerDiv to the footer container
 footerContainer.appendChild(footerDiv);
-footerContainer.appendChild(copyright);
