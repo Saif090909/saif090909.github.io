@@ -97,9 +97,42 @@ a:hover {
 /* ################################ */
 
 @media (max-width: 600px) {
+    
+    .h3, .p1 {
+        margin-left: 10px;
+    }
+    
     body {
         font-size: 14px;
     }
+
+    .container1 {
+        position: relative; /* Establishes a positioning context */
+        background-color: #E4F9F5;
+        display: flex;
+        flex-direction: column; /* Ensures stacking of elements */
+        align-items: center;
+        padding: 20px;
+    }
+
+    .cloud {
+    position: absolute; /* Allows it to be layered over #header */
+    top: 0; /* Position it at the top of the container */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust centering */
+    z-index: 10; /* Ensure it is on top */
+    opacity: 0.7; /* Adjust transparency (0 = fully transparent, 1 = fully opaque) */
+    }
+
+    #header {
+        position: relative; /* Ensure proper stacking within the container */
+        z-index: 5; /* Lower than .cloud */
+        padding: 50px;
+        background-color: #FAFFAF;
+        color: #0F67B1;
+        border-radius: 50px;
+        margin-top: 100px; /* Push header down for visibility */
+        }
 }
 /* ################################ */
 /* ####    Medium screens ######### */
@@ -107,11 +140,7 @@ a:hover {
 @media (min-width: 601px) and (max-width: 1024px) {
     
     
-    h1, h2, h3, .header3 {
-        font-family: "Merriweather", serif;
-        font-weight: 300;
-        font-style: normal;
-    }
+   
     
     .container1 {
         position: relative; /* Establishes a positioning context */
@@ -125,13 +154,12 @@ a:hover {
     .photo2 {
         display: inline-block;
         position: relative;
-        border: solid red;
         justify-self: end;
         grid-row: 2;
     }
     
     .cloud {
-        position: absolute; /* Allows it to be layered over #header */
+    position: absolute; /* Allows it to be layered over #header */
     top: 0; /* Position it at the top of the container */
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Adjust centering */
@@ -140,7 +168,7 @@ a:hover {
     }
     
     #header {
-        position: relative; /* Ensure proper stacking within the container */
+    position: relative; /* Ensure proper stacking within the container */
     z-index: 5; /* Lower than .cloud */
     padding: 50px;
     background-color: #FAFFAF;
@@ -155,25 +183,19 @@ a:hover {
     
     
     
-    .skills {
-        text-align: center;
-        margin-top: 100px;
-        color: #0F67B1;
-        font-size: 3rem;
-    }
+
     
     .parent {
-   
         background-color: #E4F9F5;
         width: 80%;
         margin-left: 50px;
         border-radius: 30px;
-        padding-bottom: 100px;
-        border: dashed red;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 20px;
     }
 
     #coding {
-        border: dashed purple;
         height: fit-content;
         width: fit-content;
         position: relative;
@@ -181,7 +203,6 @@ a:hover {
     }
 
     #airplane {
-        border: dashed green;
         margin-left: 30%;
         height: fit-content;
         width: fit-content;
@@ -189,7 +210,6 @@ a:hover {
     }
     
     .grid1 {
-        border: dashed blue;
         margin-bottom: 30px;
 
     }
@@ -202,17 +222,7 @@ a:hover {
         color: #3FA2F6;
     }
 
-    footer {
-        background-color: #FAFFAF;
-        padding: 50px;
-        margin-top: 20px;
-    }
-    
-    .footer {
-        display: flex;
-        justify-content: space-around;
-        font-size: x-large;
-    }
+
 
 
 /* ################################ */
@@ -295,17 +305,7 @@ a:hover {
         margin-left: 20px;
     }
     
-    footer {
-        background-color: #FAFFAF;
-        padding: 50px;
-      
-    }
-    
-    .footer {
-        display: flex;
-        justify-content: space-around;
-        font-size: x-large;
-    }
+
 
 
 }
