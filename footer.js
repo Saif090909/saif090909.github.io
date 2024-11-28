@@ -1,5 +1,7 @@
 // footer.js
 
+// footer.js
+
 // Get the footer container element where the content will be inserted
 const footerContainer = document.getElementById('footer-container');
 
